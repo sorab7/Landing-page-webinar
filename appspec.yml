@@ -3,6 +3,16 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html/
+  - source: /assets
+    destination: /var/www/html/assets
+  - source: /assets/css/style.css?v=1.2
+    destination: /var/www/html/assets/css/
+  - source: /assets/font-awesome.min.css
+    destination: /var/www/html/assets/
+  - source: /assets/owl.carousel.min.css
+    destination: /var/www/html/assets/
+  - source: /assets/owl.theme.default.min.css
+    destination: /var/www/html/assets/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
@@ -15,4 +25,3 @@ hooks:
     - location: scripts/stop_server
       timeout: 300
       runas: root
-
