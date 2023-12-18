@@ -5,6 +5,10 @@ files:
     destination: /var/www/html/
   - source: /assets
     destination: /var/www/html/assets
+  - source: /scripts
+    destination: /var/www/html/scripts
+  - source: /aos.js
+    destination: /var/www/html/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
